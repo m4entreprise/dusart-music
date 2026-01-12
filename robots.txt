@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Canonical host
+Host: www.dusart-music.be
+
+# Sitemap location
+Sitemap: https://www.dusart-music.be/sitemap.xml

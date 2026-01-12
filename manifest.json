@@ -1,0 +1,35 @@
+{
+  "name": "DUSART Presskit",
+  "short_name": "DUSART",
+  "description": "Presskit officiel du DJ Thomas Dusart alias DUSART",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#181830",
+  "theme_color": "#181830",
+  "icons": [
+    {
+      "src": "logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo-markable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo-markable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUSART - Dossier de Presse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="dusart-logo-noir-transparent.ico">
+    <meta name="theme-color" content="#181830">
+    
+    <!-- PWA / iOS / Windows icons & status bar -->
+    <link rel="apple-touch-icon" sizes="180x180" href="logo-180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="DUSART">
+    <meta name="msapplication-TileColor" content="#181830">
+    
+    <!-- iOS Startup Images (portrait + landscape, iPhone & iPad) -->
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_16_Pro_Max_portrait.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_16_Pro_Max_landscape.png" media="(device-width: 932px) and (device-height: 430px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_16_Pro_landscape.png" media="(device-width: 874px) and (device-height: 402px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_16e__iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png" media="(device-width: 852px) and (device-height: 393px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png" media="(device-width: 926px) and (device-height: 428px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_11__iPhone_XR_portrait.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_11__iPhone_XR_landscape.png" media="(device-width: 896px) and (device-height: 414px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png" media="(device-width: 812px) and (device-height: 375px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png" media="(device-width: 667px) and (device-height: 375px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png" media="(device-width: 736px) and (device-height: 414px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png" media="(device-width: 568px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+
+    <!-- iPad (portrait + landscape) -->
+    <link rel="apple-touch-startup-image" href="/ios/13__iPad_Pro_M4_portrait.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/13__iPad_Pro_M4_landscape.png" media="(device-width: 1366px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/12.9__iPad_Pro_portrait.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/12.9__iPad_Pro_landscape.png" media="(device-width: 1366px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/11__iPad_Pro_M4_portrait.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/11__iPad_Pro_M4_landscape.png" media="(device-width: 1194px) and (device-height: 834px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/11__iPad_Pro__10.5__iPad_Pro_portrait.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/11__iPad_Pro__10.5__iPad_Pro_landscape.png" media="(device-width: 1112px) and (device-height: 834px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/10.9__iPad_Air_portrait.png" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/10.9__iPad_Air_landscape.png" media="(device-width: 1180px) and (device-height: 820px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/10.5__iPad_Air_portrait.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/10.5__iPad_Air_landscape.png" media="(device-width: 1112px) and (device-height: 834px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/10.2__iPad_portrait.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/10.2__iPad_landscape.png" media="(device-width: 1080px) and (device-height: 810px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png" media="(device-width: 1024px) and (device-height: 768px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="/ios/8.3__iPad_Mini_portrait.png" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/ios/8.3__iPad_Mini_landscape.png" media="(device-width: 1133px) and (device-height: 744px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <!-- SEO de base -->
+    <meta name="description" content="DUSART — DJ & producteur de musique électronique. Dossier de presse officiel : biographie, médias, logos, prestations et contacts booking/presse.">
+    <link rel="canonical" href="https://www.dusart-music.be/">
+    <link rel="alternate" href="https://www.dusart-music.be/" hreflang="fr-BE">
+    <link rel="alternate" href="https://www.dusart-music.be/" hreflang="x-default">
+
+    <!-- Open Graph / Réseaux sociaux -->
+    <meta property="og:title" content="DUSART — Dossier de Presse officiel">
+    <meta property="og:description" content="DJ & producteur de musique électronique. Logos, médias, bio, prestations, chiffres clés et contacts.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_BE">
+    <meta property="og:url" content="https://www.dusart-music.be/">
+    <meta property="og:image" content="https://www.dusart-music.be/og-image.png?v=2">
+    <meta property="og:image:secure_url" content="https://www.dusart-music.be/og-image.png?v=2">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="DUSART — Presskit">
+    <meta property="og:site_name" content="DUSART">
+    <meta property="og:updated_time" content="1755887497">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DUSART — Dossier de Presse officiel">
+    <meta name="twitter:description" content="DJ & producteur de musique électronique. Logos, médias, bio, prestations et contacts.">
+    <meta name="twitter:image" content="https://www.dusart-music.be/og-image.png?v=2">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Données structurées JSON-LD (Person) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Thomas Dusart",
+        "alternateName": "DUSART",
+        "jobTitle": "DJ / Producteur",
+        "url": "https://www.dusart-music.be/",
+        "image": "https://www.dusart-music.be/og-image.png",
+        "sameAs": [],
+        "email": "mailto:press@dusart-music.com",
+        "telephone": "+3243785206",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Liège, Belgique",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Liège",
+            "addressCountry": "BE"
+          }
+        },
+        "nationality": "Belgian",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "DUSART"
+        }
+      }
+    </script>
+    
+    <!-- Données structurées JSON-LD (Organization) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "DUSART",
+        "url": "https://www.dusart-music.be/",
+        "logo": "https://www.dusart-music.be/dusart-logo-noir-transparent.svg",
+        "sameAs": []
+      }
+    </script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <img src="dusart-logo-noir.svg" alt="DUSART Logo" class="hero-logo">
+            <div class="scroll-indicator" role="button" tabindex="0" aria-label="Aller à la section Présentation">
+                <div class="scroll-arrow">↓</div>
+                <p class="scroll-text">Découvrir</p>
+            </div>
+            <button id="pwa-install" style="display:none; margin-top:16px; padding:12px 16px; background:#181830; color:#fff; border:none; border-radius:12px; font-size:16px; min-height:44px; cursor:pointer;">
+              Installer l’app
+            </button>
+            <div id="ios-install-hint" style="display:none; margin-top:12px; padding:12px 16px; border:1px solid rgba(24,24,48,0.15); border-radius:12px; background:#fff; color:#181830; font-size:14px; line-height:1.4;">
+              <strong>Installer sur iPhone/iPad</strong><br>
+              Ouvrez le menu  
+              <span aria-hidden="true">Partager</span> de Safari puis choisissez « Ajouter à l’écran d’accueil ».
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Présentation -->
+            <section class="presentation">
+                <h2>Présentation</h2>
+                <div class="summary">
+                    <p><strong>Thomas Dusart</strong>, alias <strong>DUSART</strong>, est un DJ et producteur belge de 23 ans, originaire de Liège où il a toujours vécu. Depuis tout jeune, il rêve de devenir DJ : il commence à l’adolescence sur FL Studio à composer ses premiers sons, puis se forme entre amis sur des platines de plus en plus avancées. Aujourd’hui, il se produit en tant que DJ à travers la Wallonie.</p>
+                </div>
+                
+                <div class="mission-vision">
+                    <h3>Mission</h3>
+                    <p>Créer des expériences musicales immersives qui transcendent les genres électroniques, avec des performances précises, énergiques et émotionnelles. En studio (FL Studio) comme sur scène (Pioneer CDJ / Rekordbox), la mission est d’offrir un son club‑ready, narratif et soigné, pensé pour les dancefloors de Wallonie et de Belgique. Chaque set vise la connexion humaine : un public rassemblé, un moment mémorable.</p>
+                    
+                    <h3>Vision</h3>
+                    <p>Devenir une référence de la scène électronique belge en affirmant une signature sonore identifiable et exportable. S’ancrer localement (Liège, Wallonie, Bruxelles) tout en nouant des collaborations avec artistes, clubs et festivals pour rayonner en Europe. Construire une communauté durable autour d’une culture du club inclusive, respectueuse et exigeante.</p>
+                </div>
+            </section>
+
+            <!-- Historique -->
+            <section class="history">
+                <h2>Historique & Contexte</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>2020</h4>
+                        <p>Naissance du projet DUSART à Liège et premières ébauches sur FL Studio, réalisées dans une chambre transformée en mini home studio.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2021</h4>
+                        <p>Premiers sets dans des bars et clubs en Wallonie ; anecdote : un warm‑up improvisé s’est transformé en closing de 3 heures après une annulation de dernière minute.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2022</h4>
+                        <p>Collaboration avec M4 Event pour la technique et la promotion ; structuration du setup autour des Pioneer CDJ et de Rekordbox pour une fiabilité scénique maximale.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2023-2024</h4>
+                        <p>Déploiement sur la scène belge (Wallonie + Bruxelles) et sorties de productions indépendantes ; un remix non-officiel a dépassé les 10k écoutes en un mois.</p>
+                    </div>
+                </div>
+                
+            </section>
+
+            <!-- Services -->
+            <section class="services">
+                <h2>Services & Prestations</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>DJ Sets Live</h3>
+                        <p>Performances en clubs, festivals et événements privés en Wallonie et partout en Belgique. Sets adaptés à chaque contexte avec matériel professionnel (Pioneer CDJ / Rekordbox).</p>
+                        <ul>
+                            <li>Clubs & Discothèques</li>
+                            <li>Festivals & Événements</li>
+                            <li>Soirées privées & Corporate</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h3>Production Musicale</h3>
+                        <p>Création de tracks originaux, remixes et compositions sur mesure (FL Studio) pour artistes et labels.</p>
+                        <ul>
+                            <li>Productions originales</li>
+                            <li>Remixes officiels</li>
+                            <li>Compositions sur mesure</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Équipe -->
+            <section class="team">
+                <h2>Artiste</h2>
+                <div class="artist-profile">
+                    <div class="artist-info">
+                        <h3>Thomas Dusart</h3>
+                        <p class="role">DJ • Producteur • Fondateur</p>
+                        <p>Passionné de musique électronique depuis son plus jeune âge, Thomas développe ses compétences en production et en performance live. Formé en autodidacte à Liège, il puise son inspiration dans la scène techno européenne tout en affirmant une identité ancrée en Belgique.</p>
+                        
+                        <h4>Expertise</h4>
+                        <ul>
+                            <li>Production musicale (FL Studio)</li>
+                            <li>Performance DJ (Pioneer CDJ, Rekordbox)</li>
+                            <li>Sound design & Mastering</li>
+                            <li>Direction artistique</li>
+                        </ul>
+                        <p><em>Anecdote</em> — Son tout premier set public s’est joué sur un contrôleur emprunté, sous la pluie, devant une poignée d’amis… et un programmateur qui l’a recontacté la semaine suivante.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Styles de set & Ambiances -->
+            <section class="styles-ambiances">
+                <h2>Styles de set & Ambiances</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>Warm‑up mélodique</h3>
+                        <p>Installation progressive, textures aériennes et groove subtil pour ouvrir la soirée en douceur.</p>
+                        <ul>
+                            <li>Tags : deep • melodic • progressive</li>
+                            <li>BPM : 120–126</li>
+                            <li>Contexte : bars, débuts de nuit, vernissages</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h3>Peak‑time techno</h3>
+                        <p>Énergie club, kick affirmé et tension contrôlée pour le cœur de nuit.</p>
+                        <ul>
+                            <li>Tags : techno • driving • hypnotic</li>
+                            <li>BPM : 128–134</li>
+                            <li>Contexte : clubs, festivals, prime‑time</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h3>Closing groovy</h3>
+                        <p>Conclusion positive et fédératrice, sélection housy/tech‑house pour relâcher la pression.</p>
+                        <ul>
+                            <li>Tags : house • tech‑house • classics</li>
+                            <li>BPM : 124–128</li>
+                            <li>Contexte : fins de nuit, afters encadrés</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="set-flow">
+                    <h3>Préparation</h3>
+                    <p>Chaque performance se co‑construit avec l’organisation. Un brief rapide permet d’aligner le contexte (salle, système son/retours, public, rôle du set, timing, transitions entre DJs). La sélection est ensuite préparée sous Rekordbox (clés USB, grilles, cues, repères) avec des pivots musicaux pour s’adapter en temps réel.</p>
+
+                    <h3>Live</h3>
+                    <ul>
+                        <li><strong>Warm‑up mélodique</strong> — Installer l’ambiance, aérer le spectre, créer l’attente sans saturer l’espace.</li>
+                        <li><strong>Peak‑time techno</strong> — Renforcer l’énergie, resserrer le groove, maintenir la tension par des transitions précises.</li>
+                        <li><strong>Closing groovy</strong> — Relâcher la pression, ramener du sourire, conclure de façon fédératrice.</li>
+                    </ul>
+                    <p>Le soundcheck reste sobre et efficace (niveaux, équilibres, contrôle des basses). Le setup privilégié est <em>Pioneer CDJ + Rekordbox</em> pour une fiabilité scénique maximale.</p>
+
+                    <h3>Après‑set</h3>
+                    <p>Un débrief court avec l’organisateur (points forts, axes d’amélioration) permet de capitaliser. Si pertinent, un extrait audio de référence peut être partagé pour nourrir la relation et préparer les prochaines dates.</p>
+                </div>
+            </section>
+
+            <!-- Médias -->
+            <section class="media">
+                <h2>Visuels & Médias</h2>
+                
+                <div class="media-section">
+                    <h3>Logos Officiels</h3>
+                    <div class="logo-downloads">
+                        <div class="logo-item">
+                            <img src="dusart-logo-noir.svg" alt="Logo Noir">
+                            <div class="download-info">
+                                <p><strong>Logos Noir</strong></p>
+                                <a href="dusart-logo-noir.svg" download>Télécharger Noir SVG</a>
+                                <a href="dusart-logo-noir-transparent.svg" download>Télécharger Noir Transparent SVG</a>
+                            </div>
+                        </div>
+                        <div class="logo-item">
+                            <img src="dusart-logo-blanc.svg" alt="Logo Blanc">
+                            <div class="download-info">
+                                <p><strong>Logos Blanc</strong></p>
+                                <a href="dusart-logo-blanc.svg" download>Télécharger Blanc SVG</a>
+                                <a href="dusart-logo-blanc-transparent.svg" download>Télécharger Blanc Transparent SVG</a>
+                            </div>
+                        </div>
+                        <div class="logo-item">
+                            <img src="dusart-logo-mauve-sur-blanc.svg" alt="Logo Mauve sur Blanc">
+                            <div class="download-info">
+                                <p><strong>Logo Mauve sur Blanc</strong></p>
+                                <a href="dusart-logo-mauve-sur-blanc.svg" download>Télécharger SVG</a>
+                            </div>
+                        </div>
+                        <div class="logo-item">
+                            <img src="dusart-logo-blanc-sur-mauve.svg" alt="Logo Blanc sur Mauve">
+                            <div class="download-info">
+                                <p><strong>Logo Blanc sur Mauve</strong></p>
+                                <a href="dusart-logo-blanc-sur-mauve.svg" download>Télécharger SVG</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-section demo">
+                    <h3>Démo</h3>
+                    <p>Découvrez un extrait live représentatif de l’univers de DUSART.</p>
+                    <div class="demo-video">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/NASJnaRaQZ0" title="Démo live DUSART"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a class="cta-link" href="https://youtu.be/NASJnaRaQZ0" target="_blank"
+                            rel="noopener">Voir la vidéo sur YouTube</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq">
+                <h2>Questions Fréquentes</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4>Quel est le style musical de DUSART ?</h4>
+                        <p>DUSART évolue principalement dans l’univers de la techno moderne, avec des influences house et progressive. Ses sets s’adaptent au contexte : plus mélodiques pour les warm‑up, plus énergiques pour les peak‑time, avec une sensibilité club belge.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>DUSART est-il disponible pour des événements privés ?</h4>
+                        <p>Oui, en Wallonie, à Bruxelles et partout en Belgique. DUSART propose ses services pour des événements privés, soirées corporate et célébrations. Contactez le booking pour un devis personnalisé.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Où peut-on écouter les productions de DUSART ?</h4>
+                        <p>Les tracks de DUSART sont disponibles sur les plateformes de streaming : Spotify, Apple Music, Beatport, SoundCloud, etc. Des extraits de sets enregistrés en Wallonie y sont également partagés.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="contact">
+                <h2>Contact Presse</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3>Relations Presse</h3>
+                        <p><strong>Email:</strong> press@dusart-music.com</p>
+                        <p><strong>Téléphone:</strong> +32 4 378 52 06</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Booking & Management</h3>
+                        <p><strong>Email:</strong> booking@dusart-music.com</p>
+                        <p><strong>Management:</strong> management@dusart-music.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Réseaux Sociaux</h3>
+                        <p><strong>Instagram:</strong> @dusart_official</p>
+                        <p><strong>Facebook:</strong> /DusartMusic</p>
+                        <p><strong>SoundCloud:</strong> /dusart-music</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="dusart-logo-blanc-transparent-cropped.svg" alt="DUSART Logo" class="footer-logo">
+                    <p class="tagline">L'élégance de la musique électronique</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <p>Email: <a href="mailto:contact@dusart-music.com">contact@dusart-music.com</a></p>
+                        <p>Tél: +32 4 378 52 06</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Réseaux</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">SoundCloud</a>
+                            <a href="#" class="social-link">Spotify</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 DUSART. Tous droits réservés.</p>
+                <div class="m4-credits">
+                    <span>Avec le soutien de</span>
+                    <div class="m4-group">
+                        <a href="https://m4entreprise.be/" target="_blank" rel="noopener">M4 Entreprise</a>
+                        <span class="divider">|</span>
+                        <a href="https://m4entreprise.be/event" target="_blank" rel="noopener">M4 Event</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>
+  (function() {
+    const trigger = document.querySelector('.scroll-indicator');
+    const target = document.querySelector('.presentation');
+    if (trigger && target) {
+      const go = () => target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      trigger.addEventListener('click', go);
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          go();
+        }
+      });
+    }
+  })();
+</script>
+<script>
+  // PWA install prompt handling (Android/Chrome et Desktop Chromium)
+  let deferredPrompt;
+  const installBtn = document.getElementById('pwa-install');
+  const installLink = document.getElementById('pwa-install-link');
+  const isMobileOrTablet = () => (
+    window.matchMedia('(hover: none) and (pointer: coarse)').matches ||
+    Math.min(window.innerWidth, window.innerHeight) <= 1024
+  );
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    // N'afficher le CTA que sur mobile/tablette
+    if (isMobileOrTablet()) {
+      if (installBtn) installBtn.style.display = 'inline-flex';
+      if (installLink) installLink.style.display = 'inline';
+    }
+  });
+
+  installBtn?.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    const promptEvent = deferredPrompt;
+    deferredPrompt = null;
+    await promptEvent.prompt();
+    // Optionally check outcome: const { outcome } = await promptEvent.userChoice;
+    if (installBtn) installBtn.style.display = 'none';
+    if (installLink) installLink.style.display = 'none';
+  });
+
+  installLink?.addEventListener('click', (e) => {
+    e.preventDefault();
+    installBtn?.click();
+  });
+
+  window.addEventListener('appinstalled', () => {
+    if (installBtn) installBtn.style.display = 'none';
+  });
+
+  // Register service worker (nécessaire pour PWA et trigger du prompt)
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      // Utiliser un chemin relatif pour fonctionner au sous-répertoire également
+      const SW_VERSION = 'v4';
+      navigator.serviceWorker.register(`sw.js?ver=${SW_VERSION}`, { updateViaCache: 'none' }).then((registration) => {
+        // Demande une vérification d'update au chargement
+        registration.update().catch(() => {});
+
+        // Quand un nouveau SW est trouvé
+        registration.addEventListener('updatefound', () => {
+          const newSW = registration.installing;
+          if (!newSW) return;
+          newSW.addEventListener('statechange', () => {
+            if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
+              // Forcer l'activation du nouveau SW puis recharger
+              newSW.postMessage('SKIP_WAITING');
+            }
+          });
+        });
+      }).catch(console.error);
+
+      // Quand le contrôleur change (nouveau SW actif), recharger pour obtenir la nouvelle version
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
+    });
+  }
+
+  // Support lien partageable ?install=1 : met en avant le CTA et scroll dessus
+  window.addEventListener('load', () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('install') === '1') {
+      if (isMobileOrTablet()) {
+        const el = installBtn || installLink;
+        if (el) {
+          el.style.outline = '2px solid #C8A45D';
+          el.style.boxShadow = '0 0 0 4px rgba(200,164,93,0.25)';
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
+    // Afficher une aide spécifique iOS (pas de prompt d'installation automatique sur Safari iOS)
+    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    const isStandalone = (window.navigator.standalone === true) || window.matchMedia('(display-mode: standalone)').matches;
+    const iosHint = document.getElementById('ios-install-hint');
+    if (isIOS && !isStandalone && iosHint) {
+      iosHint.style.display = 'block';
+    }
+  });
+</script>
+</body>
+</html>
